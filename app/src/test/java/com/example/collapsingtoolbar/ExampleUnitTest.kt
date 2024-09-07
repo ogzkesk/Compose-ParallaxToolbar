@@ -1,4 +1,4 @@
-package com.example.collapsedtoolbar
+package com.example.collapsingtoolbar
 
 import org.junit.Test
 

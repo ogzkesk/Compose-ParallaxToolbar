@@ -1,4 +1,4 @@
-package com.example.collapsedtoolbar
+package com.example.collapsingtoolbar
 
 data class ImageData(
     val pageRef: String,

@@ -1,4 +1,4 @@
-package com.example.collapsedtoolbar
+package com.example.collapsingtoolbar
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -17,11 +17,11 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.collapsedtoolbar.page.FirstPage
-import com.example.collapsedtoolbar.page.FourthPage
-import com.example.collapsedtoolbar.page.SecondPage
-import com.example.collapsedtoolbar.page.ThirdPage
-import com.example.collapsedtoolbar.ui.theme.CollapsedToolbarTheme
+import com.example.collapsingtoolbar.page.FirstPage
+import com.example.collapsingtoolbar.page.FourthPage
+import com.example.collapsingtoolbar.page.SecondPage
+import com.example.collapsingtoolbar.page.ThirdPage
+import com.example.collapsingtoolbar.ui.theme.CollapsedToolbarTheme
 
 class MainActivity : ComponentActivity() {
 

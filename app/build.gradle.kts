@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.collapsedtoolbar"
+    namespace = "com.example.collapsingtoolbar"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.collapsedtoolbar"
+        applicationId = "com.example.collapsingtoolbar"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -22,7 +22,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

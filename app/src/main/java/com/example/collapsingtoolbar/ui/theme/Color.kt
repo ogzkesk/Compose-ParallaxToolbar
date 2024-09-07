@@ -1,4 +1,4 @@
-package com.example.collapsedtoolbar.ui.theme
+package com.example.collapsingtoolbar.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

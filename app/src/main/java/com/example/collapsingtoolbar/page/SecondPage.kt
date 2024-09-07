@@ -1,4 +1,4 @@
-package com.example.collapsedtoolbar.page
+package com.example.collapsingtoolbar.page
 
 import android.content.res.Configuration
 import androidx.compose.foundation.layout.Arrangement
@@ -11,7 +11,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Surface
@@ -21,13 +20,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.collapsedtoolbar.ImageData
-import com.example.collapsedtoolbar.ParallaxLayout
-import com.example.collapsedtoolbar.R
-import com.example.collapsedtoolbar.ui.theme.CollapsedToolbarTheme
+import com.example.collapsingtoolbar.ImageData
+import com.example.collapsingtoolbar.ParallaxLayout
+import com.example.collapsingtoolbar.R
+import com.example.collapsingtoolbar.ui.theme.CollapsedToolbarTheme
 
 @Composable
-fun ThirdPage(imageData: ImageData) {
+fun SecondPage(imageData: ImageData) {
 
     val scrollState = rememberScrollState()
 
@@ -38,11 +37,6 @@ fun ThirdPage(imageData: ImageData) {
         navigationIcon = {
             IconButton(onClick = {}) {
                 Icon(imageVector = Icons.Default.ArrowBack, contentDescription = null)
-            }
-        },
-        actions = {
-            IconButton(onClick = {}) {
-                Icon(imageVector = Icons.Default.Settings, contentDescription = null)
             }
         }
     ) {
@@ -71,7 +65,7 @@ fun ThirdPage(imageData: ImageData) {
     uiMode = Configuration.UI_MODE_NIGHT_YES
 )
 @Composable
-private fun ThirdPagePreview() {
+private fun SecondPagePreview() {
     CollapsedToolbarTheme {
         Surface {
             ThirdPage(ImageData("", "", ""))

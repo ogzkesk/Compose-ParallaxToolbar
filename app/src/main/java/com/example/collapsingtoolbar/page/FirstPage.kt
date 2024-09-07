@@ -1,4 +1,4 @@
-package com.example.collapsedtoolbar.page
+package com.example.collapsingtoolbar.page
 
 import android.content.res.Configuration
 import androidx.compose.animation.AnimatedVisibility
@@ -48,9 +48,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.collapsedtoolbar.ParallaxLayout
-import com.example.collapsedtoolbar.R
-import com.example.collapsedtoolbar.ui.theme.CollapsedToolbarTheme
+import com.example.collapsingtoolbar.ParallaxLayout
+import com.example.collapsingtoolbar.R
+import com.example.collapsingtoolbar.ui.theme.CollapsedToolbarTheme
 import kotlinx.coroutines.launch
 
 @Composable

@@ -1,4 +1,4 @@
-package com.example.collapsedtoolbar
+package com.example.collapsingtoolbar
 
 import android.content.Context
 import android.util.Range
@@ -30,6 +30,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -173,7 +175,9 @@ fun ParallaxLayout(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(headerHeight)
-                .background(toolbarGradient)
+                .drawBehind {
+                    drawRect(toolbarGradient)
+                }
         ) {
 
             if (image != null && image is Int) {
@@ -256,6 +260,7 @@ fun ParallaxLayout(
                     modifier = Modifier
                         .statusBarsPadding()
                         .align(Alignment.BottomStart)
+                        .padding(end = initialActionsWidth + toolbarContentPadding)
                         .onGloballyPositioned {
                             if (initialTitleTextSize == Size.Zero) {
                                 initialTitleTextSize = it.size.toSize()
@@ -286,7 +291,9 @@ fun ParallaxLayout(
                                 stop = (startPadding + textPadding).toDp(),
                                 fraction = headerScale.reversed()
                             ).toPx()
-                            translationY = -defaultToolbarHeight.value / 2 - titlePadding
+                            translationY = (-headerHeight.toPx() / 16F) * headerScale +
+                                    (-defaultToolbarHeight.toPx() / 2F) * headerScale.reversed() +
+                                    (size.height / 2) * headerScale.reversed()
                         },
                     text = title,
                     color = titleTextColor,

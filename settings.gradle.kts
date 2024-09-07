@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CollapsedToolbar"
+rootProject.name = "CollapsingToolbar"
 include(":app")
  
